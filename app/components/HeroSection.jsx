@@ -10,12 +10,12 @@ const HeroSection = () => {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl  sm: text-5lg lg:text-6xl font-extrabold">
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 ">
-              Hello, I'm Gina{" "}
+              Hello, I'm {" "}
             </span>
             <br></br>
             <TypeAnimation
               sequence={[
-                " Castromonte",
+                " Gina Castromonte",
                 1000,
                 "Software Engineer",
                 1000,
