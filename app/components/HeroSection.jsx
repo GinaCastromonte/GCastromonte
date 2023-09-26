@@ -10,30 +10,25 @@ const HeroSection = () => {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl  sm: text-5lg lg:text-6xl font-extrabold">
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 ">
-              Hello, I'm {" "}
+              Hello, I'm{" "}
             </span>
             <br></br>
             <TypeAnimation
               sequence={[
                 " Gina Castromonte",
                 1000,
-                "Software Engineer",
+                "a Software Engineer",
                 1000,
-                "Web Developer",
+                "a Web Developer",
                 1000,
-               
               ]}
               wrapper="span"
               speed={50}
-           
               repeat={Infinity}
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            similique quo, rerum fugit placeat cum dolores aliquid, commodi
-            corporis, consectetur non illo! Impedit totam harum ad eum tenetur
-            ab. In.
+            Discover Digital Wonders: Welcome to My Interactive Web Journey
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-600 via-blue-400 to-blue-300 hover:bg-slate-200 text-white">
