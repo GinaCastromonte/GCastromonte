@@ -23,8 +23,17 @@ export async function POST(req, res) {
       ),
     });
 
-    return NextResponse.json(data);
+      if (data.success) {
+      return NextResponse.json({ success: true, message: "Email sent successfully" });
+    } else {
+      return NextResponse.json({ success: false, message: "Failed to send email" });
+    }
   } catch (error) {
-    return NextResponse.json({ error });
+    console.error(error);
+    return NextResponse.json({ success: false, message: "Failed to send email" });
   }
 }
+
+
+
+

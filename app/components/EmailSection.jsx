@@ -7,7 +7,8 @@ import Image from "next/image";
 import axios from "axios";
 
 const EmailSection = () => {
-    
+    const [emailSubmitted, setEmailSubmitted] = useState(false)
+
   const [emailForm, setEmailForm] = useState({
     email: "",
     subject: "",
@@ -24,8 +25,10 @@ e.preventDefault()
 try {
     const emailURL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/send`
     await axios.post(emailURL,emailForm)
+    setEmailSubmitted(true);
 } catch (error) {
     console.log(error);
+    
 }
 
  }
@@ -109,6 +112,13 @@ try {
           >
             Send Message
           </button>
+          {
+            emailSubmitted && (
+                <p className="text-green-400 text-sm mt-2">
+                    Email sent successfully! 
+                </p>
+                )
+          }
         </form>
       </div>
     </section>
