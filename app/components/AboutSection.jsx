@@ -54,7 +54,7 @@ const AboutSection = () => {
             I'm a passionate full-stack Software Engineer dedicated to crafting
             interactive and responsive web applications. My skill set includes
             JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize,Next.js, Figma, Tailwind, HTML, CSS, and Git. As a quick
+            Sequelize,Next.js, Figma, TailwindCSS, HTML, CSS, and Git. As a quick
             learner, I'm constantly driven to expand my knowledge and expertise.
             I thrive in collaborative environments and am enthusiastic about
             working with fellow professionals to co-create outstanding
