@@ -1,12 +1,34 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import GithubIcon from "../../public/github2.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
 
 const EmailSection = () => {
+    
+  const [emailForm, setEmailForm] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEmailForm((prevState) => ({ ...prevState, [name]: value }));
+  };
+  
+ const handleSubmit=async(e)=>{
+e.preventDefault()
 
+try {
+    const emailURL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/send`
+    await axios.post(emailURL,emailForm)
+} catch (error) {
+    console.log(error);
+}
 
+ }
   return (
     <section
       id="contact"
@@ -31,7 +53,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div className="z-10">
-        <form className="flex flex-col">
+        <form onSubmit={handleSubmit} className="flex flex-col">
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -42,9 +64,11 @@ const EmailSection = () => {
             <input
               type="email"
               id="email"
+              name="email"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="john@google.com"
+              onChange={handleChange}
             />
           </div>
           <div className="mb-6">
@@ -57,9 +81,11 @@ const EmailSection = () => {
             <input
               type="text"
               id="subject"
+              name="subject"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Just saying hi"
+              onChange={handleChange}
             />
           </div>
           <div className="mb-6">
@@ -74,6 +100,7 @@ const EmailSection = () => {
               id="message"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Leave your message here..."
+              onChange={handleChange}
             />
           </div>
           <button
