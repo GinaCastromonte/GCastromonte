@@ -19,8 +19,7 @@ const NavLink = ({ href, title, handleNavBarClose }) => {
           ? -100
           : 0
       }
-      className={`block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white
-  ${isMobile ? "bg-opacity-90 h-12" : ""}`}
+      className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
     >
       {title}
     </ScrollLink>
