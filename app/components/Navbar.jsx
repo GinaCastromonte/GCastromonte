@@ -40,7 +40,7 @@ const Navbar = () => {
           href={"/"}
           className="text-xl md:text-5xl text-white font-semibold"
         >
-          <Image src="/images/logo.png" alt="Logo" width={160} height={40} />
+          <Image src="/images/logo2.png" alt="Logo" width={160} height={40} />
         </Link>
 
         <div className=" mobile-menu block md:hidden">
