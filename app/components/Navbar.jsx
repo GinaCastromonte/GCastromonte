@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import { Bars3Icon} from "@heroicons/react/24/solid";
-import { XIcon as XmarkIcon } from "@heroicons/react/solid";
+import XmarkIcon from '@heroicons/react/outline/XmarkIcon'; 
+
 
 
 import Image from "next/image"
