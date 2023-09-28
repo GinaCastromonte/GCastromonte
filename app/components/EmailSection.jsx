@@ -7,7 +7,7 @@ import Image from "next/image";
 import axios from "axios";
 
 const EmailSection = () => {
-    const [emailSubmitted, setEmailSubmitted] = useState(false)
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const [emailForm, setEmailForm] = useState({
     email: "",
@@ -18,20 +18,23 @@ const EmailSection = () => {
     const { name, value } = e.target;
     setEmailForm((prevState) => ({ ...prevState, [name]: value }));
   };
-  
- const handleSubmit=async(e)=>{
-e.preventDefault()
 
-try {
-    const emailURL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/send`
-    await axios.post(emailURL,emailForm)
-    setEmailSubmitted(true);
-} catch (error) {
-    console.log(error);
-    
-}
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
- }
+    try {
+      const emailURL = `${process.env.NEXT_PUBLIC_BASE_URL}/api/send`;
+      await axios.post(emailURL, emailForm);
+      setEmailSubmitted(true);
+      setEmailForm({
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <section
       id="contact"
@@ -39,7 +42,9 @@ try {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="">
-        <h5 className="lg:text-4xl sm:text-2xl font-bold text-white my-2">Let`s Connect</h5>
+        <h5 className="lg:text-4xl sm:text-2xl font-bold text-white my-2">
+          Let`s Connect
+        </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
           I am actively exploring new career opportunities and welcome your
@@ -66,6 +71,7 @@ try {
             </label>
             <input
               type="email"
+              value={emailForm.email}
               id="email"
               name="email"
               required
@@ -83,6 +89,7 @@ try {
             </label>
             <input
               type="text"
+              value={emailForm.subject}
               id="subject"
               name="subject"
               required
@@ -100,6 +107,7 @@ try {
             </label>
             <textarea
               name="message"
+              value={emailForm.message}
               id="message"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Leave your message here..."
@@ -112,13 +120,11 @@ try {
           >
             Send Message
           </button>
-          {
-            emailSubmitted && (
-                <p className="text-green-400 text-sm mt-2">
-                    Email sent successfully! 
-                </p>
-                )
-          }
+          {emailSubmitted && (
+            <p className="text-green-400 text-sm mt-2">
+              Email sent successfully!
+            </p>
+          )}
         </form>
       </div>
     </section>
