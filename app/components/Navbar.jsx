@@ -3,7 +3,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
-import { Bars3Icon, XmarkIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon} from "@heroicons/react/24/solid";
+import { XIcon as XmarkIcon } from "@heroicons/react/24/solid";
+
+
+import Image from "next/image"
 
 import MenuOverlay from "./MenuOverlay";
 
@@ -32,10 +36,11 @@ const Navbar = () => {
       <div className="flex container lg-py-4  flex-wrap items-center justify-between mx-auto px-4 py-2 ">
         <Link
           href={"/"}
-          className=" text-xl md:text-5xl text-white font-semibold"
+          className="text-xl md:text-5xl text-white font-semibold"
         >
-          <img src="/images/logo.png" className="h-20 w-auto"></img>
+          <Image src="/images/logo.png" alt="Logo" width={160} height={40} />
         </Link>
+
         <div className=" mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
