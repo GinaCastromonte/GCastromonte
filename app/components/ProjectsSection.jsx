@@ -24,11 +24,21 @@ const projectsData = [
     image: "/images/projects/Animerch.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Team-ShenaniGAINS/graceshopper-project",
-    previewUrl: "https://animerch.onrender.com ",
+    previewUrl: "/",
   },
   {
     id: 3,
     title: "Campus Directory",
+    description:
+      "The project centered around the creation of a campus directory website, leveraging a technology stack that included Tailwind CSS, Node.js, Express, JavaScript, React, and Redux. This initiative aimed to provide a user-friendly platform for accessing comprehensive information about campus resources and individuals. By utilizing Tailwind CSS for responsive and visually appealing design, along with Node.js and Express for robust server-side functionalities, we ensured efficient data retrieval and management.",
+    image: "/images/projects/Campusdirectory.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/GinaCastromonte/CampusDirectory ",
+    previewUrl: "/",
+  },
+  {
+    id: 4,
+    title: "SODOTO",
     description:
       "The project centered around the creation of a campus directory website, leveraging a technology stack that included Tailwind CSS, Node.js, Express, JavaScript, React, and Redux. This initiative aimed to provide a user-friendly platform for accessing comprehensive information about campus resources and individuals. By utilizing Tailwind CSS for responsive and visually appealing design, along with Node.js and Express for robust server-side functionalities, we ensured efficient data retrieval and management.",
     image: "/images/projects/Campusdirectory.png",
