@@ -38,16 +38,6 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "SODOTO",
-    description:
-      "The project centered around the creation of a campus directory website, leveraging a technology stack that included Tailwind CSS, Node.js, Express, JavaScript, React, and Redux. This initiative aimed to provide a user-friendly platform for accessing comprehensive information about campus resources and individuals. By utilizing Tailwind CSS for responsive and visually appealing design, along with Node.js and Express for robust server-side functionalities, we ensured efficient data retrieval and management.",
-    image: "/images/projects/Campusdirectory.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/GinaCastromonte/CampusDirectory ",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
     title: "Drone Page",
     description:
       "This project leveraged the power of CSS to bring a static image of a drone to life, making it appear as if it were hovering and gliding gracefully across the screen. By utilizing various CSS animations and transitions, we achieved a visually engaging effect that drew users' attention and added an element of dynamism to the landing page. ",
